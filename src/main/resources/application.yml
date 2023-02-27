@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+#sharding.jdbc:
+#  data-sources:
+#    ds_master:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1:13306/flowable?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: root
+#      #      url: jdbc:mysql://127.0.0.1:3306/social_sys?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+#      #      username: root
+#      #      password: rW6zz6TdaU9BTSOea6C5hb6TIvhqGyVoJYUufjPFc5/zu5PpyDpNMv7ws3advzyT4RSvs84HWVgxv9njoYKrSA==
+#      initial-size: 4
+#      min-idle: 5
+#      max-active: 10
+#      max-wait: 15000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1 FROM DUAL
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      poolPreparedStatements: true
+#      maxPoolPreparedStatementPerConnectionSize: 20
+#    ds_slave:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1:13306/flowable?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: root
+#      initial-size: 4
+#      min-idle: 5
+#      max-active: 10
+#      max-wait: 15000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1 FROM DUAL
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      poolPreparedStatements: true
+#      maxPoolPreparedStatementPerConnectionSize: 20
+#
+#  master-slave-rule:
+#    name: ds_ms
+#    master-data-source-name: ds_master
+#    slave-data-source-names: ds_slave
+#    load-balance-algorithm-type: round_robin
+spring:
+  profiles:
+    active: dev
